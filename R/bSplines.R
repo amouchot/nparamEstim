@@ -153,7 +153,8 @@ bsplines3<-function(x,y,lambdas,cents=c(0.03,0.25,0.5,0.75,0.97)){
 bsplines<-function(x,y,lambdas,cents=c(0.03,0.25,0.5,0.75,0.97)){
   colors<-c("green","blue","red","blue","green")
   lty=c(2,2,3,2,2)
-  plot.new()
+  plot.new("This method does not support the dataset")
+  text(0.5,0.5, )
   title(main='Cubic B-Splines d=3')
   j=0
 
