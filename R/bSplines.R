@@ -160,24 +160,24 @@ bsplines<-function(x,y,lambdas,cents=c(0.03,0.25,0.5,0.75,0.97)){
     j=j+1
     fit<-quantregGrowth::gcrq(y~ps(x, lambda=lambdas, d=3),tau=cent)
     par(new=TRUE)
-    plot(fit, res=TRUE, lty=lty[j],lwd=2,col=colors[j], xlab, ylab)
+    plot(fit, res=TRUE, lty=lty[j],lwd=2,col=colors[j])
   }
-  plot.new()
-  title(main='Cubic B-splines d=2')
-  j=0
-  for (cent in cents){
-    j=j+1
-    fit<-quantregGrowth::gcrq(y~ps(x, lambda=lambdas, d=2),tau=cent)
-    par(new=TRUE)
-    plot(fit, res=TRUE, lty=lty[j],lwd=2,col=colors[j],xlab,ylab)
-  }
-  plot.new()
-  title(main='Cubic B-splines d=1')
-  j=0
-  for (cent in cents){
-    j=j+1
-    fit<-quantregGrowth::gcrq(y~ps(x, lambda=lambdas, d=1),tau=cent)
-    par(new=TRUE)
-    plot(fit, res=TRUE, lty=lty[j],lwd=2,col=colors[j],xlab,ylab)
-  }
+  # plot.new()
+  # title(main='Cubic B-splines d=2')
+  # j=0
+  # for (cent in cents){
+  #   j=j+1
+  #   fit<-quantregGrowth::gcrq(y~ps(x, lambda=lambdas, d=2),tau=cent)
+  #   par(new=TRUE)
+  #   plot(fit, res=TRUE, lty=lty[j],lwd=2,col=colors[j],xlab,ylab)
+  # }
+  # plot.new()
+  # title(main='Cubic B-splines d=1')
+  # j=0
+  # for (cent in cents){
+  #   j=j+1
+  #   fit<-quantregGrowth::gcrq(y~ps(x, lambda=lambdas, d=1),tau=cent)
+  #   par(new=TRUE)
+  #   plot(fit, res=TRUE, lty=lty[j],lwd=2,col=colors[j],xlab,ylab)
+  # }
 }
