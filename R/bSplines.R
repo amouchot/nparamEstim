@@ -160,9 +160,9 @@ bsplines<-function(x,y,lambdas,cents=c(0.03,0.25,0.5,0.75,0.97)){
 
   for (cent in cents){
     j=j+1
-    fit<-try(quantregGrowth::gcrq(y~ps(x, lambda=lambdas, d=3),tau=cent), outFile = "This method does not support the dataset")
+    fit<-try(quantregGrowth::gcrq(y~ps(x, lambda=lambdas, d=3),tau=cent), silent = TRUE)#, outFile = "This method does not support the dataset")
     par(new=TRUE)
-    try(plot(fit, res=TRUE, lty=lty[j],lwd=2,col=colors[j]), outFile = "This method does not support the dataset")
+    try(plot(fit, res=TRUE, lty=lty[j],lwd=2,col=colors[j]),silent = TRUE)# outFile = "This method does not support the dataset")
   }
   # plot.new()
   # title(main='Cubic B-splines d=2')
